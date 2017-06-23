@@ -1,0 +1,59 @@
+{
+  "name": "infernojs-boilerplate",
+  "version": "1.0.0",
+  "description": "A simple starting point for a real world infernojs app",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "prebuild": "rimraf dist",
+    "build": "",
+    "start": "",
+    "dev": "webpack-dev-server --quiet --config webpack.conf.js --host 0.0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Agezao/infernojs-boilerplate.git"
+  },
+  "keywords": [
+    "infernojs",
+    "boilerplate"
+  ],
+  "author": "Gabriel Age",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Agezao/infernojs-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Agezao/infernojs-boilerplate#readme",
+  "dependencies": {
+    "history": "^4.6.3",
+    "inferno": "^3.6.0",
+    "inferno-component": "^3.6.0",
+    "inferno-create-element": "^3.6.0",
+    "inferno-router": "^3.6.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.1",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-inferno": "^3.2.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "copy-webpack-plugin": "^4.0.1",
+    "eslint": "^3.19.0",
+    "eslint-config-inferno-app": "^4.1.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "inferno-devtools": "^3.6.0",
+    "npm-run-all": "1.8.0",
+    "rimraf": "^2.6.1",
+    "serve": "^5.2.1",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
+  }
+}
