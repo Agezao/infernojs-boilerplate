@@ -10,10 +10,11 @@ class App extends Component {
 
 	render({ children }) {
 		return(
-      <div>
+      <div class="full-width">
       	<Topbar />
-        <h1>Inferno Boilerplate</h1>
-        { children }
+      	<div class="container-lg"> 
+        	{ children }
+        </div>
       </div>
 		);
 	}

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "",
     "prebuild": "rimraf dist",
-    "build": "",
+    "build": "webpack --config webpack.conf.js --progress --profile --colors",
     "start": "",
     "dev": "webpack-dev-server --quiet --config webpack.conf.js --host 0.0.0.0"
   },
@@ -29,7 +29,8 @@
     "inferno": "^3.6.0",
     "inferno-component": "^3.6.0",
     "inferno-create-element": "^3.6.0",
-    "inferno-router": "^3.6.0"
+    "inferno-router": "^3.6.0",
+    "spookycss": "^1.1.4"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
