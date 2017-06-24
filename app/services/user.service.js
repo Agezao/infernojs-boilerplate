@@ -38,13 +38,24 @@ class UserService {
 		return users;
 	}
 
+	Save(model) {
+		if(model.id)
+			return this.Update(model);
+		return this.Create(model);
+	}
+
 	Create(model) {
+		if(!model.id)
+			model.id = users.length;
+
 		users.push(model);
+		return model;
 	}
 
 	Update(model) {
 		this.Delete(model.id);
 		this.Create(model);
+		return model;
 	}
 
 	Get(id) {
