@@ -60,9 +60,9 @@ class UserService {
 	}
 
 	Find(name) {
-		for(var i in users)
-			if(users[i]['name'].toLowerCase().indexOf(name.toLowerCase()) > -1)
-				return users[i];
+		return users.filter(function(el) {
+				return el.name.toLowerCase().indexOf(name.toLowerCase()) > -1;
+			});
 	}
 }
 

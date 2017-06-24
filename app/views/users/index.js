@@ -8,7 +8,7 @@ import styles from './styles.scss';
 class Users extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {users: []};
+		this.state = {users: [], filter: ''};
 	}
 
 	componentWillMount() {
@@ -16,7 +16,10 @@ class Users extends Component {
 	}
 
 	RefreshList() {
-		this.state.users = new UserService().List();
+		if(!this.state.filter)
+			this.state.users = new UserService().List();
+		else
+			this.state.users = new UserService().Find(this.state.filter);
 		this.setState(this.state);	
 	}
 
@@ -28,6 +31,13 @@ class Users extends Component {
 			return false;
 
 		new UserService().Delete(user.id);
+		ctx.RefreshList();
+	}
+
+	FilterInput(ctx, ev) {
+		ctx.state.filter = ev.target.value;
+		ctx.setState(ctx.state);
+
 		ctx.RefreshList();
 	}
 
@@ -48,9 +58,10 @@ class Users extends Component {
 		}
 
 		return(
-      <div class="pd-20 overflow-hidden users-list">
+      <div class="overflow-hidden users-list">
       	<h3>Users</h3>
       	<div class="row overflow-hidden">
+      		<input onInput={linkEvent(this, this.FilterInput)} type="search" placeholder="filter" />
       		<Link class="button sm pull-right ion-plus-round" to="/users/new/">New</Link>
       	</div>
       	<div class="row">

@@ -17,7 +17,7 @@ class UsersEdit extends Component {
 
 	render() {
 		return(
-      <div class="pd-20 overflow-hidden">
+      <div class="overflow-hidden">
       	users details {this.state.userId}
       	{this.state.user ? this.state.user.name : ''}
       </div>
