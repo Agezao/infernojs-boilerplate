@@ -46,7 +46,7 @@ class UserService {
 
 	Create(model) {
 		if(!model.id)
-			model.id = users.length;
+			model.id = users.length + 1;
 
 		users.push(model);
 		return model;
