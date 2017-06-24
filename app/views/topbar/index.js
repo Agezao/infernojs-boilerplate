@@ -13,6 +13,7 @@ class Topbar extends Component {
       	<p class="pull-left ma-cl-v bold-header">Inferno Boilerplate</p>
       	<nav class="pull-right">
 	        <Link to="/" class="pd-10 pc-cl-v">Home</Link>
+	        <Link to="/users" class="pd-10 pc-cl-v">Users</Link>
 	        <Link to="/about" class="pd-10 pc-cl-v">About</Link>
         </nav>
       </div>

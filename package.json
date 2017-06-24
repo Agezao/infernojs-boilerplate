@@ -7,6 +7,7 @@
     "test": "",
     "prebuild": "rimraf dist",
     "build": "webpack --config webpack.conf.js --progress --profile --colors",
+    "prod": "npm run build && serve --port 8080 ./dist/",
     "start": "",
     "dev": "webpack-dev-server --quiet --config webpack.conf.js --host 0.0.0.0"
   },
@@ -43,6 +44,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.4",
     "eslint": "^3.19.0",
     "eslint-config-inferno-app": "^4.1.0",
     "gulp": "^3.9.1",
@@ -53,7 +55,9 @@
     "inferno-devtools": "^3.6.0",
     "npm-run-all": "1.8.0",
     "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.6",
     "serve": "^5.2.1",
+    "style-loader": "^0.18.2",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.0"
   }

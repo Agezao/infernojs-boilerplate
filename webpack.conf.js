@@ -13,7 +13,16 @@ module.exports = {
 		loaders: [{
 			test: /\.js$/,
 			loader: 'babel-loader'
-		}]
+			},
+			{
+				test: /\.css$/,
+				loader: 'style-loader!css-loader?modules'
+			},
+			{
+				test: /\.scss$/,
+				loaders: ['style-loader', 'css-loader', 'sass-loader']
+			}
+		]
 	},
 	devServer: {
 		contentBase: './',
