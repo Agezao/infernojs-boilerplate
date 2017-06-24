@@ -32,6 +32,9 @@ class UsersEdit extends Component {
 	}
 
 	Save(ctx, ev) {
+		if(!ctx.state.user.name)
+			return false;
+		
 		new UserService().Save(ctx.state.user);
 		ctx.router.push('/users');
 	}
@@ -42,17 +45,17 @@ class UsersEdit extends Component {
       	<form>
       		<div class="row">
 		      <div class="col-12 pd-5 pd-cl-v">
-		        <input class="full-width lg clear center-text" type="text" onInput={linkEvent(this, this.UpdateProp)} value={this.state.user.name} placeholder="User Name" id="name" />
+		        <input required class="full-width lg clear center-text" type="text" onInput={linkEvent(this, this.UpdateProp)} value={this.state.user.name} placeholder="User Name" id="name" />
 		      </div>
 		    </div>
 		    <div class="row">
 		      <div class="col-6 pd-5 pd-cl-v">
 		        <label for="exampleEmailInput">Location</label>
-		        <input class="full-width clear" type="text" onInput={linkEvent(this, this.UpdateProp)} value={this.state.user.location} placeholder="location" id="location" />
+		        <input required class="full-width clear" type="text" onInput={linkEvent(this, this.UpdateProp)} value={this.state.user.location} placeholder="location" id="location" />
 		      </div>
 		      <div class="col-6 pd-5 pd-cl-v">
 		        <label for="exampleEmailInput">Age</label>
-		        <input class="full-width clear" type="text" onInput={linkEvent(this, this.UpdateProp)} value={this.state.user.age} placeholder="age" id="age"/>
+		        <input required class="full-width clear" type="number" max="99" onInput={linkEvent(this, this.UpdateProp)} value={this.state.user.age} placeholder="age" id="age"/>
 		      </div>
 		    </div>
 		    <div class="row">
