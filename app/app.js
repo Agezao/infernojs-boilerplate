@@ -8,7 +8,7 @@ class App extends Component {
 		return(
       <div class="full-width">
       	<Topbar />
-      	<div class="container-lg"> 
+      	<div class="container-lg overflow-hidden"> 
         	{ this.props.children }
         </div>
       </div>
