@@ -1,6 +1,8 @@
 import {Inferno, linkEvent} from 'inferno';
 import Component from 'inferno-component';
 
+import styles from './styles.scss';
+
 class Login extends Component {
 	constructor(props, {router}) {
 		super(props);
@@ -37,13 +39,16 @@ class Login extends Component {
 						</div>
 						<div class="col-6 col-offset-3">
 							<label for="exampleEmailInput">Password</label>
-							<input class="full-width" onInput={linkEvent(this, this.UpdateProp)} type="password" placeholder="Email" id="password" />
+							<input class="full-width" onInput={linkEvent(this, this.UpdateProp)} type="password" placeholder="Password" id="password" />
 						</div>
 						<div class="col-6 col-offset-3 center-text">
 					      	<input type="button" class="button-primary" onClick={linkEvent(this, this.Login)} value="Login"/>
 						</div>
 					</div>
 				</form>
+			</div>
+			<div class="col-12 center-text login-hit">
+				<small>(type any email and any password and hit login)</small>
 			</div>
 		</div>
 			);
